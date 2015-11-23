@@ -7,6 +7,9 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/css/custom.css"/>
+		<script type="text/javascript" src="./ncmb.min.js" charset="utf-8"></script>
+  		<script src="./puxface.js"></script>
+  		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	</head>
 
 	<body>
@@ -29,13 +32,19 @@
 		<div class="tab-content">
 		<div class="tab-pane active" id="all">
 		<div class="blockDtl">
-			<img src="assets/images/img-11.png" alt="">
+			<img src="assets/images/img-11.png" alt="" id = "result">
 		</div>
-		<div class="uploadButton">
-	    画像をアップする
-	    <input type="file" onchange="uv.style.display='inline-block'; uv.value = this.value;" />
-	    <input type="text" id="uv" class="uploadValue" disabled />
-		</div>
+		<!-- <div class="uploadButton"> -->
+	    
+	    
+		<label class="uploadButton">
+
+			<span>画像をアップする<!- 画像用spanタグ -></span>
+			<input type="file" id="fromCamera" class="file" style="display:none;" onclick="requestRecognition()">
+		</label>
+	    <!--<input type="file"  name="inputFile" id="fromCamera" accept="image/*" capture="camera" onclick="requestRecognition()"/>-->
+	    <!-- <input type="text" id="uv" class="uploadValue" disabled /> -->
+		<!-- </div>-->
 	</div>
 </div>
 
